@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>IWT CW - Roland Crompton</title>
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="iwt-cw.js"></script>
+    <style type="text/css">
+        #resultTable {text-align: center;}
+      </style>
+</head>
+
+<body>
+    <!-- Form for setting the parameters of the serach -->
+    <form id="searchForm" method="dialog" autocomplete="off">
+        <table>
+            <tr>
+                <td>File</td>
+                <td>Tournament</td>
+            </tr>
+            <tr>
+                <td>
+                    <select name="file" id="file">
+                        <option value="mens">Men's</option>
+                        <option value="womens">Women's</option>
+                    </select>
+                </td>
+
+                <td>
+                    <select name="tournament" id="tournament">
+                        <option value="Any">Any</option>
+                        <option value="Australian Open">Australian Open</option>
+                        <option value="French Open">French Open</option>
+                        <option value="U.S. Open">U.S. Open</option>
+                        <option value="Wimbledon">Wimbledon</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Year</td>
+                <td>Year Operator</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="year" id="year">
+                </td>
+                <td>
+                    <select name="year-op" id="year-op">
+                        <option value="=">equals</option>
+                        <option value=">">greater than</option>
+                        <option value="<"> less than</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Winner</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="winner" id="winner">
+                </td>
+            </tr>
+            <tr>
+                <td>Runner Up</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="text" name="runner-up" id="runner-up">
+                </td>
+            </tr>
+        </table>
+
+        <p>
+        <button id="send-query">Search</button>
+        <button id="clear-input">Clear form</button>
+        <button id="clear-output">Clear results</button>
+        </p>
+    </form>
+    
+    <!-- Place where the output of the search is displayed -->
+    <div id="output"></div>
+    
+</body>
+</html>
