@@ -4,6 +4,7 @@
  // passes them to the PHP file in the form of query string parameters, gets the resulting JSON,
  // and displays them on the original HTML page.
 function getResults() {
+    window.alert();
     // Clear existing results on the HTML page
     clearResults();
     const file = document.getElementById("file").value + "-grand-slam-winners.json";
@@ -15,7 +16,7 @@ function getResults() {
     
     // Get the JSON file
     $.getJSON(
-        "iwt-cw.php", {
+        "./iwt-cw.php", {
             file: file,
             tournament: tournament,
             yearOp: yearOp,
